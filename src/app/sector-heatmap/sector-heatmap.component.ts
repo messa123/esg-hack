@@ -10,6 +10,7 @@ import * as chartsData from '../shared/configs/sectorMap.config';
 })
 export class SectorHeatmapComponent{
   mapMulti = mapMulti;
+  isTopLevel = true;
   mapColorScheme = chartsData.mapColorScheme;
   mapView: any[] = chartsData.mapView;
   lmapGradient = chartsData.mapGradient;
@@ -19,7 +20,14 @@ export class SectorHeatmapComponent{
 }
 
 onSelect(event) {
-  this.mapMulti = mapEquity;
+  if(this.isTopLevel == true){
+    this.isTopLevel = false;
+    this.mapMulti = mapEquity;
+  }
+  else{
+    this.isTopLevel = true;
+    this.mapMulti = mapMulti;
+  }
     console.log(event);
 }
 
