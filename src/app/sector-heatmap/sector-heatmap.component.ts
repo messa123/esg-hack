@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { mapMulti} from '../shared/data/sectorMap';
+import { mapEquity} from '../shared/data/sectorMap';
 import * as chartsData from '../shared/configs/sectorMap.config';
 
 @Component({
@@ -18,6 +19,7 @@ export class SectorHeatmapComponent{
 }
 
 onSelect(event) {
+  this.mapMulti = mapEquity;
     console.log(event);
 }
 
