@@ -2,7 +2,7 @@ import * as shape from 'd3-shape';
 
 //Line Charts
 
-export var lineChartView: any[] = [550, 400];
+export var lineChartView: any[] = [750, 600];
 
 // options
 export var lineChartShowXAxis = true;

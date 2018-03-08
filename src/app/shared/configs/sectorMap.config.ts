@@ -2,7 +2,7 @@ import * as shape from 'd3-shape';
 
 //Line Charts
 
-export var mapView: any[] = [550, 400];
+export var mapView: any[] = [750, 600];
 
 // options
 export var mapGradient = false;
