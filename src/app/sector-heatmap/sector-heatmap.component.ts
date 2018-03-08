@@ -1,20 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { lineChartMulti} from '../shared/data/ngxChart';
-import * as chartsData from '../shared/configs/ngxCharts.config';
+import { mapMulti} from '../shared/data/sectorMap';
+import * as chartsData from '../shared/configs/sectorMap.config';
 
 @Component({
   selector: 'sector-heatmap',
   templateUrl: './sector-heatmap.component.html',
   styleUrls: ['./sector-heatmap.component.sass']
 })
-export class SectorHeatmapComponent implements OnInit {
+export class SectorHeatmapComponent{
+  mapMulti = mapMulti;
+  mapColorScheme = chartsData.mapColorScheme;
+  mapView: any[] = chartsData.mapView;
+  lmapGradient = chartsData.mapGradient;
 
-  constructor() { }
+  constructor() {
+    Object.assign(this, { mapMulti })
+}
 
-  ngOnInit() {
-
-
-  }
+onSelect(event) {
+    console.log(event);
+}
 
   
 
